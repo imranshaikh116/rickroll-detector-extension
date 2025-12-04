@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Rickroll & Phishing Link Detector",
+  "description": "Warns you before opening suspicious or Rickroll links.",
+  "version": "1.0",
+
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "notifications",
+    "tabs",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "*://*/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Rickroll Detector"
+  },
+
+  "icons": {
+    "48": "icons/icon.png"
+  }
+}
