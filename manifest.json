@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Rickroll & Phishing Link Detector",
-  "description": "Warns you before opening suspicious or Rickroll links.",
-  "version": "1.0",
+  "name": "Advanced Phishing & Rickroll Detection",
+  "description": "Scans links, blocks Rickrolls, detects phishing, and gives a safety score.",
+  "version": "2.0",
 
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
-    "notifications",
     "tabs",
+    "notifications",
     "storage"
   ],
 
@@ -20,9 +20,16 @@
     "service_worker": "background.js"
   },
 
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Rickroll Detector"
+    "default_title": "Security Status"
   },
 
   "icons": {

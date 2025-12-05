@@ -1,1 +1,1 @@
-console.log("Extension UI Loaded");
+console.log("Content Script Loaded");
